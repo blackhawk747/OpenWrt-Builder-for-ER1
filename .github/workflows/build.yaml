@@ -197,7 +197,9 @@ jobs:
           git clone --depth=1 --single-branch https://github.com/stackia/rtp2httpd package/extra-packages/rtp2httpd
           mv package/extra-packages/rtp2httpd/openwrt-support/rtp2httpd/Makefile.versioned package/extra-packages/rtp2httpd/openwrt-support/rtp2httpd/Makefile
           mv package/extra-packages/rtp2httpd/openwrt-support/luci-app-rtp2httpd/Makefile.versioned package/extra-packages/rtp2httpd/openwrt-support/luci-app-rtp2httpd/Makefile
-
+          # [新增] 引入 OpenClash 源码
+          git clone --depth=1 --single-branch https://github.com/vernesong/OpenClash.git package/extra-packages/luci-app-openclash
+          
           # Clone only msd_lite from immortalwrt without unnecessary files
           # git clone --depth=1 --filter=blob:none --sparse --single-branch --no-checkout https://github.com/immortalwrt/packages.git package/extra-packages/immortalwrt-packages
           # git -C package/extra-packages/immortalwrt-packages sparse-checkout set net/msd_lite
